@@ -4,11 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
+
+
 module.exports = (env, argv) => {
   return {
+   
+
     entry: './src/index.js',
     output: { path: path.resolve(__dirname, 'build'), filename: '[name].bundle.js' },
     performance: { hints: false },
+
     module: {
       rules: [
         { test: /\.html$/, loader: 'html-loader' },
@@ -84,3 +89,4 @@ module.exports = (env, argv) => {
     }
   };
 };
+
